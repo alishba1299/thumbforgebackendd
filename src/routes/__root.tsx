@@ -86,6 +86,10 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script
+          src="https://pl30488348.effectivecpmnetwork.com/99/01/29/9901296d3c606a4a18da8740c957b28b.js"
+          async
+        />
       </body>
     </html>
   );
