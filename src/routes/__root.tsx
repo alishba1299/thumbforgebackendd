@@ -90,6 +90,12 @@ function RootShell({ children }: { children: ReactNode }) {
           src="https://pl30488348.effectivecpmnetwork.com/99/01/29/9901296d3c606a4a18da8740c957b28b.js"
           async
         />
+        <div id="container-c65137d58252b8a93524f34c3dc9747e" />
+        <script
+          async
+          data-cfasync="false"
+          src="https://pl30488349.effectivecpmnetwork.com/c65137d58252b8a93524f34c3dc9747e/invoke.js"
+        />
       </body>
     </html>
   );
