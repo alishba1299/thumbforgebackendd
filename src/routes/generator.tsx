@@ -3,6 +3,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { useState } from "react";
 import { generateThumbnail, type ThumbStyle, type ColorStyle } from "@/lib/thumbnail";
 import { Wand2, Download, RefreshCw, Upload, Sparkles, Image as ImageIcon, X, AlertTriangle } from "lucide-react";
+import { AdSkyscraper } from "@/components/site/AdSkyscraper";
 
 export const Route = createFileRoute("/generator")({
   head: () => ({
@@ -91,6 +92,11 @@ function Generator() {
 
       <section className="mx-auto max-w-6xl px-4 pb-16">
         <div className="grid gap-6 lg:grid-cols-5">
+          {/* Ad */}
+          <div className="hidden lg:flex lg:col-span-5 justify-center">
+            <AdSkyscraper />
+          </div>
+
           {/* Controls */}
           <div className="glass-strong lg:col-span-2 rounded-3xl p-6 space-y-6">
             <div>
