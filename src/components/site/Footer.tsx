@@ -1,10 +1,43 @@
 import { Link } from "@tanstack/react-router";
 import { Sparkles, Twitter, Github, Youtube } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+function AdBanner() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || container.childNodes.length > 0) return;
+
+    const configScript = document.createElement("script");
+    configScript.innerHTML = `
+      atOptions = {
+        'key' : 'a4c452b0637f2fd18dd33bf6906d1611',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    `;
+    const adScript = document.createElement("script");
+    adScript.src = "https://www.highperformanceformat.com/a4c452b0637f2fd18dd33bf6906d1611/invoke.js";
+
+    container.appendChild(configScript);
+    container.appendChild(adScript);
+  }, []);
+
+  return (
+    <div className="mx-auto mb-8 flex justify-center">
+      <div ref={containerRef} style={{ width: 320, height: 50 }} />
+    </div>
+  );
+}
 
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-white/10 py-12">
       <div className="mx-auto max-w-6xl px-4">
+        <AdBanner />
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold">
