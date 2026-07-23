@@ -96,6 +96,26 @@ function RootShell({ children }: { children: ReactNode }) {
           data-cfasync="false"
           src="https://pl30488349.effectivecpmnetwork.com/c65137d58252b8a93524f34c3dc9747e/invoke.js"
         />
+        <script
+          src="https://pl30488351.effectivecpmnetwork.com/4a/3c/1f/4a3c1f2906efd12ea1de0bcf17442761.js"
+          async
+        />
+        <div style={{ width: 300, height: 250, margin: "0 auto" }}>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                atOptions = {
+                  'key' : 'be699adffb63194c400d585c76398034',
+                  'format' : 'iframe',
+                  'height' : 250,
+                  'width' : 300,
+                  'params' : {}
+                };
+              `,
+            }}
+          />
+          <script src="https://www.highperformanceformat.com/be699adffb63194c400d585c76398034/invoke.js" />
+        </div>
       </body>
     </html>
   );
