@@ -6,6 +6,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/generator", label: "Generator" },
   { to: "/templates", label: "Templates" },
+  { to: "/games", label: "Games" },
   { to: "/blog", label: "Blog" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
