@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { posts } from "@/lib/posts";
 import { ArrowLeft } from "lucide-react";
+import { AdSkyscraper } from "@/components/site/AdSkyscraper";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -36,7 +37,8 @@ function PostPage() {
   const post = Route.useLoaderData();
   return (
     <PageShell>
-      <article className="mx-auto max-w-3xl px-4 pt-14 pb-16">
+      <div className="mx-auto flex max-w-5xl gap-8 px-4 pt-14 pb-16">
+        <article className="max-w-3xl flex-1">
         <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> Back to blog
         </Link>
@@ -66,7 +68,14 @@ function PostPage() {
             return <p key={i} className="leading-relaxed text-muted-foreground">{block}</p>;
           })}
         </div>
-      </article>
+        </article>
+
+        <aside className="hidden lg:block">
+          <div className="sticky top-24">
+            <AdSkyscraper />
+          </div>
+        </aside>
+      </div>
     </PageShell>
   );
 }
